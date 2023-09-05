@@ -1,9 +1,13 @@
+/** @format */
+import '../../index.css'
 interface Props {
-	pageName:string
+	pageName: string;
 }
-const Heading = ({ pageName }:Props) => {
-	return  <h1 className='text-center pt-5 fs-2'>{pageName}</h1>
-}
+const Heading = ({ pageName }: Props) => {
+	return <h1 className='text-center p4-5 pageTitle'>{pageName}</h1>;
+};
 export default Heading;
+
+
 
 

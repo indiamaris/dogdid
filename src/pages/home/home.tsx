@@ -7,7 +7,7 @@ const Home = () => {
 	return (
 		<>
 			<div className=' text-center m-4'>
-				<Heading pageName='Home'/>
+				<Heading pageName='Dog Log'/>
 				</div>
 		
 		</>
