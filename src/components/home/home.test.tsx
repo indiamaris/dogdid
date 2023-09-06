@@ -1,13 +1,11 @@
 /** @format */
 
 import { render } from '@testing-library/react';
-import App from './App';
 import '@testing-library/jest-dom';
+import Home from './home';
 
-
-
-test('d-testando o teste', () => {
-	const { getByText } = render(<App />);
+test('display strings', () => {
+	const { getByText } = render(<Home />);
 	expect(getByText('Dog Log')).toBeInTheDocument();
 });
 

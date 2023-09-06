@@ -1,10 +1,14 @@
 /** @format */
 
-import Home from '../../pages/home/home';
+import Home from '../home/home';
 import './App.css';
 
 function App() {
-	return <Home />;
+	return (
+		<div>
+			<Home />
+		</div>
+	);
 }
 
 export default App;

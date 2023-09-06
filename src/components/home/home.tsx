@@ -1,15 +1,14 @@
 /** @format */
 
-import Heading from '../../components/heading/heading';
+import Heading from '../heading/heading';
 
 const Home = () => {
-
+	const pageName = 'Dog Log'
 	return (
 		<>
 			<div className=' text-center m-4'>
-				<Heading pageName='Dog Log'/>
-				</div>
-		
+				<Heading pageName={pageName} />
+			</div>
 		</>
 	);
 };
