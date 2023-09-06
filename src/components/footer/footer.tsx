@@ -1,15 +1,10 @@
 /** @format */
 interface Props {
-	companyName:string
+	companyName: string;
 }
-const Footer = ({ companyName }:Props) => {
-	return (
-		<footer className='   footer mt-auto py-1 border-top bg-body-tertiary'>
-			{companyName}
-		</footer>
-	);
+const Footer = ({ companyName }: Props) => {
+	return <footer className='footer py-1 border-top'>{companyName}</footer>;
 };
 
 export default Footer;
-
 

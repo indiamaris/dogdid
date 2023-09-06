@@ -5,7 +5,7 @@ interface Props {
 
 const PageDescription = ({ pageDescription }:Props) => {
 	return (
-			<p className="fs-6 text-muted" >{pageDescription}</p>
+			<p className="text-muted" >{pageDescription}</p>
 	);
 };
 

@@ -29,5 +29,9 @@ a:-webkit-any-link {
 		letter-spacing: 20px;
     line-height: 90px;
 	}
+
+	.mb-footer{
+		  margin-top: 7rem;
+	}
 }
 
