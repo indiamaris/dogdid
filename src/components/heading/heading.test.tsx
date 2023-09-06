@@ -14,13 +14,10 @@ test('render PageName', () => {
 	expect(screen.getByRole('heading')).toHaveTextContent('');
 });
 
-
 // esse eh o teste que nao to conseguindo rodar
-// test('renders a page name', () => {
-// 	const { asFragment, getByText } = render(<Heading pageName={'Dog Log'} />);
-// 	expect(getByText('Dog Log')).toBeInTheDocument();
-// 	expect(asFragment()).toMatchInlineSnapshot(
-// 		`<h1 class="text-center p4-5 pageTitle">Dog Log</h1>`
-// 	);
-// });
+test('renders a page name', () => {
+	const { getByText } = render(<Heading pageName={'Dog Log'} />);
+	expect(getByText('Dog Log')).toBeInTheDocument();
+	expect(getByText('Dog Log').tagName).toBe('H1');
+});
 
