@@ -8,7 +8,7 @@ interface Props {
 
 const BlockCheckInput = ({ children }: Props) => {
 	return (
-		<div className='form-check text-start d-flex justify-content-between mx-5 px-5 mb-4'>
+		<div className='form-check text-start d-flex justify-content-around mx-5 px-4 mb-4'>
 			{children}
 		</div>
 	);

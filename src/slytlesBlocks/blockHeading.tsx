@@ -7,7 +7,7 @@ interface Props {
 }
 
 const BlockHeading = ({ children }: Props) => {
-	return <div className='p-4 mb-4 text-center'>{children} </div>;
+	return <div className='text-center pt-4'>{children} </div>;
 };
 
 export default BlockHeading;

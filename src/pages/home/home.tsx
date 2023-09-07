@@ -6,11 +6,10 @@ import Heading from '../../components/heading/heading';
 import HomeBtns from './homeBtns';
 
 // Import fot blosking styles
-
+import BlockDescription from '../../slytlesBlocks/blockDescription';
 import BlockHeading from '../../slytlesBlocks/blockHeading';
 
 import BlockContainer from '../../slytlesBlocks/BlockContainer';
-import BlockDescription from '../../components/heading/blockDescription';
 
 const pageName = 'Dog Log';
 
@@ -22,14 +21,14 @@ const Home = () => (
 			<BlockHeading>
 				<Heading pageName={pageName} />
 			</BlockHeading>
-			<BlockDescription>
+			<BlockDescription pageName={pageName}>
 				<PageDescription
 					children={pageDescription}
 					pageName={pageName}
 				/>
+
+				<HomeBtns />
 			</BlockDescription>
-			<HomeBtns />
-			
 		</BlockContainer>
 	</>
 );

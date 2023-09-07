@@ -7,11 +7,13 @@ const HomeBtns = () => {
 		<>
 		
 				<BlockBtn>
-					<Btn to='login'>Login</Btn>	
+				<Btn to='login'>Login</Btn>
+						<Btn to='signIn'>Create a new account</Btn>	
 				</BlockBtn>
 
 				
 		</>
+		
 	);
 };
 

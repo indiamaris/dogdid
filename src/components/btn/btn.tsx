@@ -15,7 +15,7 @@ interface Props {
 }
 
 const Btn = ({ children, to, onClick, type, className }: Props) => {
-	const extendedClassName = `btn btn-primary ${className || ''}`;
+	const extendedClassName = `btn btn-primary rounded-pill ${className || ''}`;
 
 	return to ? (
 		<Link
@@ -36,4 +36,6 @@ const Btn = ({ children, to, onClick, type, className }: Props) => {
 };
 
 export default Btn;
+
+
 

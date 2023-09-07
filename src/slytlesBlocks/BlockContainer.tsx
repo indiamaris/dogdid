@@ -7,7 +7,7 @@ interface Props {
 }
 
 const BlockContainer = ({ children }: Props) => {
-	return <div className='p-4 text-center'>{children}</div>;
+	return <div className='m-4 text-center'>{children}</div>;
 };
 
 export default BlockContainer;

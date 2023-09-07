@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import App from './components/app/App';
+import SigIn from './pages/signin/SigIn';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
@@ -18,10 +19,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 					path='/'
 					element={<Home />}
 				/>
-				{/* <Route
+				<Route
 					path='signin'
 					element={<SigIn />}
-				/> */}
+				/>
 
 				<Route
 					path='login'
