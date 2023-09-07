@@ -8,6 +8,7 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/home';
 import Login from './pages/login/login';
+import App from './components/app/App';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
@@ -27,7 +28,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 					element={<Login />}
 				/>
 			</Routes>
+			<App />
 		</BrowserRouter>
 	</React.StrictMode>
 );
+
 

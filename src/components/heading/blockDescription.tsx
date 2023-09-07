@@ -7,6 +7,7 @@ interface Props {
 }
 
 const BlockDescription = ({ children }: Props) => {
+	
 	return (
 		<div
 			className='className='

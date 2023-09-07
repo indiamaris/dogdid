@@ -7,8 +7,19 @@ interface Props {
 }
 
 const BlockFooter = ({ children }: Props) => {
-	return <div className='mb-footer'>{children}</div>;
+	return (
+		<footer className='mb-footer py-2 text-mute text-end pe-1 '>
+{children}
+		</footer>
+	);
 };
 
 export default BlockFooter;
+
+
+
+
+
+
+
 

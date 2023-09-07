@@ -2,66 +2,71 @@
 
 import Btn from '../../components/btn/btn';
 import Heading from '../../components/heading/heading';
+
+import BlockHeading from '../../slytlesBlocks/blockHeading';
+import BlockHome from '../../slytlesBlocks/BlockContainer';
+import PageDescription from '../../components/heading/pageDescription/pageDescription';
+import BlockFormControl from './bloclFormControl/blockFormControl';
+import BlockCheckInput from './blockCheckInput';
+import BlockBtn from '../../components/btn/blockBtn';
+
 const pageName = 'Login';
 
-const Login = () => {
-	return (
-		<>
-			<div className='m-4'>
-				<div className='p-2 text-center'>
-					<Heading pageName={'Login'} />
-				</div>
-				<div
-					className='
-		container pt-5'>
-					<form>
-						<h1 className='h3 mb-4 fw-normal'> Please sign in:</h1>
+const handleClick = (event: MouseEvent): void =>
+	console.log({ event }, 'clicked');
 
-						<div className='form-floating mb-4'>
-							<input
-								type='email'
-								className='form-control'
-								id='floatingInput'
-								placeholder='name@example.com'
-							/>
-							<label htmlFor='floatingInput mb-5'>
-								Email address
-							</label>
-						</div>
-						<div className='form-floating'>
-							<input
-								type='password'
-								className='form-control'
-								id='floatingPassword'
-								placeholder='Password'
-							/>
-							<label htmlFor='floatingPassword'>Password</label>
-						</div>
+const Login = () => (
+	<>
+		<BlockHome>
+			<BlockHeading>
+				<Heading pageName={pageName} />
+			</BlockHeading>
 
-						<div className='form-check text-start my-3'>
-							<input
-								className='form-check-input'
-								type='checkbox'
-								value='remember-me'
-								id='flexCheckDefault'
-							/>
-							<label
-								className='form-check-label mb-5'
-								htmlFor='flexCheckDefault'>
-								Remember me
-							</label>
-						</div>
-						<Btn type='submit'>Submit</Btn>
+			<form>
+				<PageDescription
+					children='Please Login'
+					pageName={pageName}></PageDescription>
 
-						<p className='mt-5 mb-3 text-body-secondary'>
-							©Indiamaris
-						</p>
-					</form>
-				</div>
-			</div>
-		</>
-	);
-};
+				<BlockFormControl>
+					<input
+						type='email'
+						className='form-control'
+						id='floatingInput'
+						placeholder='name@example.com'
+					/>
+					<label htmlFor='floatingInput mb-5'>Email address</label>
+				</BlockFormControl>
+
+				<BlockFormControl>
+					<input
+						type='password'
+						className='form-control'
+						id='floatingPassword'
+						placeholder='Password'
+					/>
+					<label htmlFor='floatingPassword'>Password</label>
+				</BlockFormControl>
+
+				<BlockCheckInput>
+					<input
+						type='checkbox'
+						value='remember-me'
+						id='flexCheckDefault'
+					/>
+
+					<label htmlFor='flexCheckDefault'>Remember me</label>
+				</BlockCheckInput>
+				<BlockBtn>
+					<Btn
+						type='submit'
+						onClick={handleClick}>
+						Submit
+					</Btn>
+				</BlockBtn>
+			</form>
+		</BlockHome>
+	</>
+);
 
 export default Login;
 
