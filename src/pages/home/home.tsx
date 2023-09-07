@@ -1,11 +1,15 @@
 /** @format */
-import Footer from '../../components/footer/footer';
-import Heading from '../../components/heading/heading';
+
 import PageDescription from '../../components/heading/pageDescription/pageDescription';
-import BlockDescription from './slytlesBlocks/BlockDescription';
-import BlockFooter from './slytlesBlocks/blockFooter';
-import BlockHome from './slytlesBlocks/blockHome';
+import Heading from '../../components/heading/heading';
+import Footer from '../../components/footer/footer';
 import HomeBtns from './homeBtns';
+
+// Import fot blosking styles
+import BlockDescription from '../../slytlesBlocks/blockDescription';
+import BlockHeading from '../../slytlesBlocks/blockHeading';
+import BlockFooter from '../../slytlesBlocks/blockFooter';
+import BlockHome from '../../slytlesBlocks/blockHome';
 
 const pageName = 'Dog Log';
 const companyName = '©2023  Grindevs';
@@ -14,7 +18,9 @@ const pageDescription =
 const Home = () => (
 	<>
 		<BlockHome>
-			<Heading pageName={pageName} />
+			<BlockHeading>
+				<Heading pageName={pageName} />
+			</BlockHeading>
 			<BlockDescription>
 				<PageDescription pageDescription={pageDescription} />
 			</BlockDescription>
