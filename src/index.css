@@ -5,33 +5,29 @@
 	src: local(ksDog), url('./fonts/ksDog.ttf') format('truetype');
 }
 
-/* resetando link */
-a:-webkit-any-link {
-	text-decoration: none;
-	color: inherit;
-}
-
-* {
-	Link {
-		text-decoration: none; /* no underline */
-	}
-}
-
 /* Small OLD devices like iphone SE (landscape phones, 375px and up ) */
 @media (min-width: 300px) {
 	.App-logo {
 		animation: App-logo-spin infinite 20s linear;
 	}
 
-	.pageTitle {
-		font-family: 'ksDog';
+	.sizesForHomeTitle {
 		font-size: 100px;
 		letter-spacing: 20px;
-    line-height: 90px;
+		line-height: 90px;
+	}
+	.sizesForPagesTitle {
+		font-size: 60px;
+		letter-spacing: 20px;
+		line-height: 90px;
 	}
 
-	.mb-footer{
-		  margin-top: 7rem;
+	.decoratedFont {
+		font-family: 'ksDog';
+	}
+
+	.mb-footer {
+		margin-top: 7rem;
 	}
 }
 

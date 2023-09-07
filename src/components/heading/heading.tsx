@@ -1,11 +1,14 @@
 /** @format */
-import '../../index.css';
 interface Props {
 	pageName: string;
 }
+
 const Heading = ({ pageName }: Props) => {
-	return <h1 className='pageTitle'>{pageName}</h1>;
+	const sizesForPages =
+		pageName.toLowerCase() === 'dog log'
+			? 'sizesForHomeTitle'
+			: 'sizesForPagesTitle';
+	return <h1 className={` decoratedFont ${sizesForPages}`}>{pageName}</h1>;
 };
 export default Heading;
-
 
