@@ -12,7 +12,9 @@ import UserCredentials from './userCredentialsInput';
 interface Props {
 	pageName: string;
 	description: string;
-	onClick?: MouseEventHandler<HTMLButtonElement>;
+	onClick?: React.MouseEvent<HTMLElement>;
+
+	// onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const FormLayout = ({ pageName, description, onClick }: Props) => {
