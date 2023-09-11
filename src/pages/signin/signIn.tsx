@@ -1,21 +1,20 @@
 /** @format */
 
 import FormLayout from '../../components/formLayout/formLayout';
-
-
-const Login = () => {
 	const handleClick = (event: MouseEvent) =>
-		console.log({ event }, 'clicked');
+		console.log({ event }, 'clicked ;)');
+
+const SignIn = () => {
 	return (
 		<FormLayout
-			pageName={'Login'}
-			description={'Please Login '}
+			pageName={'Sign in'}
+			description={'Create a new account: '}
 			onClick={handleClick}
 		/>
 	);
 };
 
-export default Login;
+export default SignIn;
 
 
 

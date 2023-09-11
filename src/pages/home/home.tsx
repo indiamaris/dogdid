@@ -1,6 +1,6 @@
 /** @format */
 
-import PageDescription from '../../components/heading/pageDescription/pageDescription';
+import PageDescription from '../../components/pageDescription/pageDescription';
 import Heading from '../../components/heading/heading';
 
 import HomeBtns from './homeBtns';
@@ -26,7 +26,6 @@ const Home = () => (
 					children={pageDescription}
 					pageName={pageName}
 				/>
-
 				<HomeBtns />
 			</BlockDescription>
 		</BlockContainer>
