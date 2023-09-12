@@ -3,6 +3,7 @@
 interface Props {
 	pageName: string;
 	children: string;
+
 }
 
 const PageDescription = ({ children, pageName }: Props) => {

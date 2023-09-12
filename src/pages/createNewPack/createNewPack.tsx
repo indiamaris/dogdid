@@ -8,6 +8,7 @@ import BlockDescription from '../../slytlesBlocks/blockDescription';
 import BlockFormControl from '../../slytlesBlocks/blockFormControl';
 import BlockHeading from '../../slytlesBlocks/blockHeading';
 import BlockContainer from '../../slytlesBlocks/BlockContainer';
+import PageLayout from '../../components/pageLayout';
 interface Props {
 	children: string;
 	pageName: string;
@@ -15,38 +16,40 @@ interface Props {
 	onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 const handleClick = (event: MouseEvent) => console.log({ event }, 'clicked');
-const PackCreator = ({ pageName, description }: Props) => (
+const CreateNewPack = ({ pageName, description }: Props) => (
 	<BlockContainer>
-		<BlockHeading>
-			<Heading pageName={pageName} />
-		</BlockHeading>
-		<BlockDescription pageName={pageName}>
-			<form>
-				<PageDescription
-					children={description}
-					pageName={pageName}></PageDescription>
+		<form>
+			<PageLayout
+				pageName={pageName}
+				children={''}
+				pageDescription={description}
+			/>
 
-				<BlockFormControl>
-					<input
-						type='text'
-						className='form-control'
-						id='packname'
-						placeholder='text'
-					/>
-					<label htmlFor=''>New pack name</label>
-				</BlockFormControl>
+			<BlockFormControl>
+				<input
+					type='text'
+					className='form-control'
+					id='packname'
+					placeholder='text'
+				/>
+				<label htmlFor=''>New pack name</label>
+			</BlockFormControl>
 
-				<BlockBtn>
-					<Btn
-						type='submit'
-						onClick={handleClick}>
-						NEXT
-					</Btn>
-				</BlockBtn>
-			</form>
-		</BlockDescription>
+			<BlockBtn>
+				<Btn
+					type='submit'
+					onClick={handleClick}>
+					BACK
+				</Btn>
+				<Btn
+					type='submit'
+					onClick={handleClick}>
+					NEXT
+				</Btn>
+			</BlockBtn>
+		</form>
 	</BlockContainer>
 );
 
-export default PackCreator;
+export default CreateNewPack;
 

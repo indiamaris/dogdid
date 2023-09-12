@@ -13,7 +13,7 @@ interface Props {
 	pageName: string;
 	description: string;
 	onClick?: React.MouseEvent<HTMLElement>;
-
+	// onClick?: MouseEvent<HTMLElement>;
 	// onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 

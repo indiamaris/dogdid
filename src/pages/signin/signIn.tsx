@@ -1,10 +1,10 @@
 /** @format */
 
 import FormLayout from '../../components/formLayout/formLayout';
-	const handleClick = (event: MouseEvent) =>
-		console.log({ event }, 'clicked ;)');
 
 const SignIn = () => {
+	const handleClick: React.MouseEvent<HTMLElement> = (event: MouseEvent) =>
+		console.log({ event }, 'clicked ;)');
 	return (
 		<FormLayout
 			pageName={'Sign in'}
@@ -15,6 +15,4 @@ const SignIn = () => {
 };
 
 export default SignIn;
-
-
 

@@ -11,10 +11,15 @@ const PackList = () => {
 	return (
 		<BlockBtn>
 			{myPacks.map((pack) => (
-				<Btn to={`pack/${pack.id}`}>{pack.name} </Btn>
+				<Btn
+					key={pack.id}
+					to={`pack/${pack.id}`}>
+					{pack.name}{' '}
+				</Btn>
 			))}
 		</BlockBtn>
 	);
 };
 
 export default PackList;
+

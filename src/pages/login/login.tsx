@@ -2,9 +2,8 @@
 
 import FormLayout from '../../components/formLayout/formLayout';
 
-
 const Login = () => {
-	const handleClick = (event: MouseEvent) =>
+	const handleClick: React.MouseEvent<HTMLElement> = (event: MouseEvent) =>
 		console.log({ event }, 'clicked');
 	return (
 		<FormLayout
@@ -16,6 +15,4 @@ const Login = () => {
 };
 
 export default Login;
-
-
 

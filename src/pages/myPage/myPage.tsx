@@ -5,7 +5,7 @@ import Heading from '../../components/heading/heading';
 import BlockContainer from '../../slytlesBlocks/BlockContainer';
 import BlockDescription from '../../slytlesBlocks/blockDescription';
 import BlockHeading from '../../slytlesBlocks/blockHeading';
-import MyPageBtns from './newPackBtn';
+import MyPageBtns from './myPageBtns';
 
 import PackList from './packList';
 

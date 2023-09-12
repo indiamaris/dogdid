@@ -12,7 +12,9 @@ import App from './components/app/App';
 import SigIn from './pages/signin/signIn';
 import MyPage from './pages/myPage/myPage';
 import PackUm from './pages/pack/packUm';
-import NewPack from './pages/newPack/newPack';
+
+import NewPack from './pages/myPage/createNewPack/newPack';
+import AddDogs from './pages/myPage/addDogs/addDogsToNewPack';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
@@ -47,11 +49,14 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 					path='mypage/pack/1'
 					element={<PackUm />}
 				/>
+
+				<Route
+					path='adddogs'
+					element={<AddDogs />}
+				/>
 			</Routes>
 			<App />
 		</BrowserRouter>
 	</React.StrictMode>
 );
-
-
 
