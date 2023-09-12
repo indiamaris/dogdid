@@ -1,7 +1,7 @@
 /** @format */
 
-import PageLayout from '../../../components/pageLayout';
-import BlockContainer from '../../../slytlesBlocks/BlockContainer';
+import PageLayout from '../pageLayout';
+import BlockContainer from '../../slytlesBlocks/BlockContainer';
 import AddDogBtns from './addDogsBtn';
 import NewDog from './newDog';
 const pageDescription = 'Lets add dogs to your pack';

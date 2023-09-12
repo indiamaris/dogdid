@@ -1,14 +1,10 @@
 /** @format */
 
-import BlockBtn from '../../components/btn/blockBtn';
-import Btn from '../../components/btn/btn';
-import Heading from '../../components/heading/heading';
-import PageDescription from '../../components/pageDescription/pageDescription';
-import BlockDescription from '../../slytlesBlocks/blockDescription';
-import BlockFormControl from '../../slytlesBlocks/blockFormControl';
-import BlockHeading from '../../slytlesBlocks/blockHeading';
+import BlockBtn from '../btn/blockBtn';
+import Btn from '../btn/btn';
+
 import BlockContainer from '../../slytlesBlocks/BlockContainer';
-import PageLayout from '../../components/pageLayout';
+import PageLayout from '../pageLayout';
 interface Props {
 	children: string;
 	pageName: string;

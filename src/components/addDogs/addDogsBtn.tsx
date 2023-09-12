@@ -1,7 +1,7 @@
 /** @format */
 
-import BlockBtn from '../../../components/btn/blockBtn';
-import Btn from '../../../components/btn/btn';
+import BlockBtn from '../btn/blockBtn';
+import Btn from '../btn/btn';
 
 const AddDogBtns = () => {
 	return (
@@ -13,3 +13,4 @@ const AddDogBtns = () => {
 };
 
 export default AddDogBtns;
+

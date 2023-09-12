@@ -1,7 +1,7 @@
 /** @format */
 
-import BlockBtn from '../../components/btn/blockBtn';
-import Btn from '../../components/btn/btn';
+import BlockBtn from './btn/blockBtn';
+import Btn from './btn/btn';
 const myPacks = [
 	{ name: 'Destroyers', id: 1 },
 	{ name: 'CalmPets', id: 2 },

@@ -5,12 +5,9 @@ import Heading from '../../components/heading/heading';
 
 import HomeBtns from './homeBtns';
 
-// Import fot blosking styles
-
 
 import BlockContainer from '../../slytlesBlocks/BlockContainer';
 import PageLayout from '../../components/pageLayout';
-
 
 const pageName = 'Dog Log';
 
@@ -21,12 +18,12 @@ const Home = () => (
 		<BlockContainer>
 			<PageLayout
 				pageName={pageName}
-				pageDescription={pageDescription} children={''}></PageLayout>
+				pageDescription={pageDescription}
+				children={''}></PageLayout>
 			<HomeBtns />
 		</BlockContainer>
 	</>
 );
 
 export default Home;
-
 

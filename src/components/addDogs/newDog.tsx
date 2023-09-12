@@ -1,7 +1,7 @@
 /** @format */
 import 'bootstrap/dist/css/bootstrap.css';
-import Input from '../../../components/inputs/input';
-import BlockFormControl from '../../../slytlesBlocks/blockFormControl';
+import Input from '../inputs/input';
+import BlockFormControl from '../../slytlesBlocks/blockFormControl';
 const NewDog = () => {
 	return (
 		<>
@@ -32,13 +32,10 @@ const NewDog = () => {
 					label={'Insert  Dog Birthday'}
 					placeholder={'newDogBirthday'}
 				/>
-				
 			</BlockFormControl>
 		</>
 	);
 };
 
 export default NewDog;
-
-
 

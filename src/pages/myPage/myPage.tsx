@@ -7,7 +7,7 @@ import BlockDescription from '../../slytlesBlocks/blockDescription';
 import BlockHeading from '../../slytlesBlocks/blockHeading';
 import MyPageBtns from './myPageBtns';
 
-import PackList from './packList';
+import PackList from '../../components/packList';
 
 const pageName = 'Welcome';
 
@@ -18,12 +18,9 @@ const MyPage = () => {
 				<BlockHeading>
 					<Heading pageName={pageName} />
 				</BlockHeading>
-				<BlockDescription
-			
-					pageName={'bubu'}>
+				<BlockDescription pageName={'bubu'}>
 					Select your pack
 					<PackList />
-					
 				</BlockDescription>
 
 				<BlockDescription pageName={pageName}>
@@ -36,7 +33,4 @@ const MyPage = () => {
 };
 
 export default MyPage;
-
-
-
 
