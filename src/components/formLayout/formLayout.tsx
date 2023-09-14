@@ -1,12 +1,12 @@
 /** @format */
 
-import BlockContainer from '../../slytlesBlocks/BlockContainer';
-import BlockDescription from '../../slytlesBlocks/blockDescription';
-import BlockHeading from '../../slytlesBlocks/blockHeading';
+import BlockContainer from '../slytlesBlocks/BlockContainer';
+import BlockDescription from '../slytlesBlocks/blockDescription';
+import BlockHeading from '../slytlesBlocks/blockHeading';
 import BlockBtn from '../btn/blockBtn';
 import Btn from '../btn/btn';
-import Heading from '../heading/heading';
-import PageDescription from '../pageDescription/pageDescription';
+import Heading from '../pageLayout/heading/heading';
+import PageDescription from '../pageLayout/pageDescription/pageDescription';
 import UserCredentials from './userCredentialsInput';
 
 interface Props {

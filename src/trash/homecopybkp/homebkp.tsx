@@ -5,6 +5,8 @@ import Heading from '../../components/pageLayout/heading/heading';
 
 import HomeBtns from './homeBtns';
 
+// Import fot blosking styles
+
 import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
 import PageLayout from '../../components/pageLayout/pageLayout';
 

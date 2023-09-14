@@ -1,10 +1,10 @@
 /** @format */
 
-import Heading from '../../components/heading/heading';
+import Heading from '../../components/pageLayout/heading/heading';
 
-import BlockContainer from '../../slytlesBlocks/BlockContainer';
-import BlockDescription from '../../slytlesBlocks/blockDescription';
-import BlockHeading from '../../slytlesBlocks/blockHeading';
+import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
+import BlockDescription from '../../components/slytlesBlocks/blockDescription';
+import BlockHeading from '../../components/slytlesBlocks/blockHeading';
 import MyPageBtns from './myPageBtns';
 
 import PackList from '../../components/packList';

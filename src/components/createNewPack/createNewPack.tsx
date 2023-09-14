@@ -1,48 +1,28 @@
 /** @format */
 
-import BlockBtn from '../btn/blockBtn';
-import Btn from '../btn/btn';
+import BlockContainer from '../slytlesBlocks/BlockContainer';
 
-import BlockContainer from '../../slytlesBlocks/BlockContainer';
-import PageLayout from '../pageLayout';
+import BlockFormControl from '../slytlesBlocks/blockFormControl';
+import Input from '../inputs/input';
 interface Props {
-	children: string;
+	children: Element;
 	pageName: string;
 	description: string;
 	onClick?: MouseEventHandler<HTMLButtonElement>;
 }
-const handleClick = (event: MouseEvent) => console.log({ event }, 'clicked');
-const CreateNewPack = ({ pageName, description }: Props) => (
+
+const CreateNewPack = () => (
 	<BlockContainer>
 		<form>
-			<PageLayout
-				pageName={pageName}
-				children={''}
-				pageDescription={description}
-			/>
-
 			<BlockFormControl>
-				<input
+				<Input
 					type='text'
 					className='form-control'
 					id='packname'
 					placeholder='text'
+					label={'New pack name'}
 				/>
-				<label htmlFor=''>New pack name</label>
 			</BlockFormControl>
-
-			<BlockBtn>
-				<Btn
-					type='submit'
-					onClick={handleClick}>
-					BACK
-				</Btn>
-				<Btn
-					type='submit'
-					onClick={handleClick}>
-					NEXT
-				</Btn>
-			</BlockBtn>
 		</form>
 	</BlockContainer>
 );

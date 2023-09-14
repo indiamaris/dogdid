@@ -2,9 +2,9 @@
 
 import BlockBtn from '../../components/btn/blockBtn';
 import Btn from '../../components/btn/btn';
-import Heading from '../../components/heading/heading';
-import BlockContainer from '../../slytlesBlocks/BlockContainer';
-import BlockHeading from '../../slytlesBlocks/blockHeading';
+import Heading from '../../components/pageLayout/heading/heading';
+import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
+import BlockHeading from '../../components/slytlesBlocks/blockHeading';
 const pageName = 'teste pack';
 
 const myDogs = [
@@ -61,5 +61,4 @@ const PackUm = () => {
 };
 
 export default PackUm;
-
 

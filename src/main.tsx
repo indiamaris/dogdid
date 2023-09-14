@@ -15,6 +15,8 @@ import PackUm from './pages/pack/packUm';
 
 
 import AddDogs from './components/addDogs/addDogsToNewPack';
+import NewPack from './pages/newPack/newPack';
+import Events from './pages/events/events';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
@@ -38,10 +40,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 					path='mypage'
 					element={<MyPage />}
 				/>
-				{/* <Route
+				<Route
 					path='mypage/newpack'
 					element={<NewPack />}
-				/> */}
+				/>
 
 				<Route />
 
@@ -54,9 +56,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 					path='adddogs'
 					element={<AddDogs />}
 				/>
+
+				<Route
+					path='events'
+					element={<Events />}
+				/>
 			</Routes>
 			<App />
 		</BrowserRouter>
 	</React.StrictMode>
 );
+
 

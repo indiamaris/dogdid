@@ -1,9 +1,9 @@
 /** @format */
 
-import PageLayout from '../pageLayout';
-import BlockContainer from '../../slytlesBlocks/BlockContainer';
+import PageLayout from '../pageLayout/pageLayout';
+import BlockContainer from '../slytlesBlocks/BlockContainer';
 import AddDogBtns from './addDogsBtn';
-import NewDog from './newDog';
+import NewDog from '../dogToLog/newDog';
 const pageDescription = 'Lets add dogs to your pack';
 const pageName = 'Add Dog';
 const AddDogs = () => {

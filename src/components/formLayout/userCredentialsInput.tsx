@@ -1,7 +1,7 @@
 /** @format */
 
-import BlockCheckInput from '../../slytlesBlocks/blockCheckInput';
-import BlockFormControl from '../../slytlesBlocks/blockFormControl';
+import BlockCheckInput from '../slytlesBlocks/blockCheckInput';
+import BlockFormControl from '../slytlesBlocks/blockFormControl';
 import Input from '../inputs/input';
 
 const UserCredentials = () => {
