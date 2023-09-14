@@ -7,10 +7,12 @@ interface Props {
 	groupId?: string;
 	groupIcon?: string;
 	children: string;
+	className:string
 }
 const EventGroupBlock = ({
 	children,
 	groupName,
+	className,
 	groupIcon,
 	groupId,
 }: Props) => {
@@ -18,7 +20,7 @@ const EventGroupBlock = ({
 		<BlockContainer>
 			<div>
 				{groupName}
-				<div className='card '>
+				<div className={`card ${className}`}>
 					<div className='my-0 fw-normal'>{children}</div>
 				</div>
 			</div>
@@ -27,6 +29,8 @@ const EventGroupBlock = ({
 };
 
 export default EventGroupBlock;
+
+
 
 
 
