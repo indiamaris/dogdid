@@ -16,10 +16,9 @@ const EventGroupBlock = ({
 }: Props) => {
 	return (
 		<BlockContainer>
-			<div className='card'>
-				<div>
-					{groupName}
-
+			<div>
+				{groupName}
+				<div className='card '>
 					<div className='my-0 fw-normal'>{children}</div>
 				</div>
 			</div>
@@ -28,4 +27,6 @@ const EventGroupBlock = ({
 };
 
 export default EventGroupBlock;
+
+
 
