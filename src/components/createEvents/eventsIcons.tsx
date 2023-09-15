@@ -25,7 +25,7 @@ const EventDietIcons = () => {
 		<div
 			className='
 			w-100 d-flex p-4
-			flex-row justify-content-between'>
+			flex-row justify-content-between flex-fill'>
 			<IconBlock
 				icon={water}
 				name={'Water'}
@@ -43,4 +43,5 @@ const EventDietIcons = () => {
 };
 
 export default EventDietIcons;
+
 

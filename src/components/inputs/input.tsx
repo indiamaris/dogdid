@@ -5,9 +5,11 @@ interface Props {
 	id: string;
 	label: string;
 	placeholder: string;
+	value?:string
+	onChange?: ()=>void
 }
 
-const Input = ({ type, className, id, placeholder, label }: Props) => {
+const Input = ({ type, className, id, placeholder, label, value, onChange }: Props) => {
 	return (
 		<>
 			<input
@@ -15,6 +17,8 @@ const Input = ({ type, className, id, placeholder, label }: Props) => {
 				className={className}
 				id={id}
 				placeholder={placeholder}
+				value={value}
+				onChange={onChange}
 			/>
 			<label htmlFor={type}>{label}</label>
 		</>
@@ -22,4 +26,6 @@ const Input = ({ type, className, id, placeholder, label }: Props) => {
 };
 
 export default Input;
+
+
 

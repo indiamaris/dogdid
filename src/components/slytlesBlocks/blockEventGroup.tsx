@@ -19,16 +19,19 @@ const EventGroupBlock = ({
 	return (
 		<BlockContainer>
 			<div>
-				{groupName}
-				<div className={`card ${className}`}>
-					<div className='my-0 fw-normal'>{children}</div>
-				</div>
+				<div> {groupName}</div>
+
+				<div className={`card  ${className}`}>{children}</div>
 			</div>
 		</BlockContainer>
 	);
 };
 
 export default EventGroupBlock;
+
+
+
+
 
 
 

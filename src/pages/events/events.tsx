@@ -13,22 +13,23 @@ const Events = () => {
 				children={''}
 				pageDescription={''}
 			/>
-
-			<EventGroupBlock
-				className='bg-info bg-gradient bg-opacity-10'
-				groupName={'Diet'}>
-				<EventDietIcons />
-			</EventGroupBlock>
-			<EventGroupBlock
-				className='bg-success bg-gradient bg-opacity-10'
-				groupName={'Health'}>
-				<EventDietIcons />
-			</EventGroupBlock>
-			<EventGroupBlock
-				className='bg-warning bg-gradient bg-opacity-10'
-				groupName={'Ohter'}>
-				<EventDietIcons />
-			</EventGroupBlock>
+			<div className='d-flex flex-column justify-content-between '>
+				<EventGroupBlock
+					className='bg-info bg-gradient bg-opacity-10'
+					groupName={'Diet'}>
+					<EventDietIcons />
+				</EventGroupBlock>
+				<EventGroupBlock
+					className='bg-success bg-gradient bg-opacity-10'
+					groupName={'Health'}>
+					<EventDietIcons />
+				</EventGroupBlock>
+				<EventGroupBlock
+					className='bg-warning bg-gradient bg-opacity-10'
+					groupName={'Ohter'}>
+					<EventDietIcons />
+				</EventGroupBlock>
+			</div>
 		</>
 	);
 };
