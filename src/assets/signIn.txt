@@ -1,29 +1,27 @@
 /** @format */
+
+import { useState } from 'react';
 import FormLayout from '../../components/formLayout/formLayout';
-import { useForm } from 'react-hook-form';
-import { UserCredentials } from '../../interfaces/interfaces';
 import NewUserCredentials from '../../components/formLayout/newUserCredentials';
 import { createUser } from '../../service/userService';
-import IconBlock from '../iconBlock';
+import { NewUser } from '../../interfaces/interfaces';
 
 const SignIn = () => {
-	const { register, handleSubmit } = useForm<UserCredentials>();
+	const [data, setData] = useState<NewUser>();
 
-	const onSubmit = (data: UserCredentials) => {
+	const handleSubmit = () => {
 		if (data) {
 			createUser(data).then((res) => console.log(res));
 		}
 	};
 
 	return (
-	
 		<FormLayout
 			pageName={'Sign in'}
 			description={'Create a new account: '}
-			onSubmit={handleSubmit(onSubmit)}>
-			<NewUserCredentials register={register} />
+			onSubmit={handleSubmit}>
+			<NewUserCredentials onChange={setData} />
 		</FormLayout>
-		
 	);
 };
 

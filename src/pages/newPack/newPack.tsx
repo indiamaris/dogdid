@@ -4,7 +4,7 @@ import BlockBtn from '../../components/btn/blockBtn';
 import Btn from '../../components/btn/btn';
 import CreateNewPack from '../../components/createNewPack/createNewPack';
 import PageLayout from '../../components/pageLayout/pageLayout';
-import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
+import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 
 // interface Props {
 // 	children: string;
@@ -13,8 +13,8 @@ import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
 // 	onClick?: MouseEventHandler<HTMLButtonElement>;
 // }
 const handleClick = (event: MouseEvent) => console.log({ event }, 'clicked');
-const pageName = 'New Pack'
-const description = 'Name for new pack'
+const pageName = 'New Pack';
+const description = 'Name for new pack';
 const NewPack = () => {
 	return (
 		<BlockContainer>
@@ -25,8 +25,8 @@ const NewPack = () => {
 			/>
 			<CreateNewPack
 				children={''}
-					pageName={pageName}
-					pageDescription={description}
+				pageName={pageName}
+				pageDescription={description}
 			/>
 
 			<BlockBtn>
@@ -46,5 +46,4 @@ const NewPack = () => {
 };
 
 export default NewPack;
-
 

@@ -1,7 +1,7 @@
 /** @format */
 import 'bootstrap/dist/css/bootstrap.css';
 import Input from '../inputs/input';
-import BlockFormControl from '../slytlesBlocks/blockFormControl';
+import BlockFormControl from '../../assets/slytlesBlocks/blockFormControl';
 const NewDog = () => {
 	return (
 		<>

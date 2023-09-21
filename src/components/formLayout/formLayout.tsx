@@ -1,48 +1,45 @@
 /** @format */
 
-import BlockContainer from '../slytlesBlocks/BlockContainer';
-import BlockDescription from '../slytlesBlocks/blockDescription';
-import BlockHeading from '../slytlesBlocks/blockHeading';
+import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
+import BlockDescription from '../../assets/slytlesBlocks/blockDescription';
+import BlockHeading from '../../assets/slytlesBlocks/blockHeading';
 import BlockBtn from '../btn/blockBtn';
 import Btn from '../btn/btn';
 import Heading from '../pageLayout/heading/heading';
 import PageDescription from '../pageLayout/pageDescription/pageDescription';
-import UserCredentials from './userCredentialsInput';
+import { FormEventHandler, ReactNode } from 'react';
+import Back from '../backOpt/back';
+import BlockBack from '../../assets/slytlesBlocks/blockBack';
+import PageLayout from '../pageLayout/pageLayout';
 
 interface Props {
 	pageName: string;
 	description: string;
-
-	// onClick?: MouseEvent<HTMLElement>;
-	// onClick?: MouseEventHandler<HTMLButtonElement>;
+	children: ReactNode;
+	onSubmit: FormEventHandler<HTMLFormElement>;
 }
 
-const FormLayout = ({ pageName, description }: Props) => {
-	return (
+const FormLayout = ({ pageName, description, children, onSubmit }: Props) => (
+	<>
 		<BlockContainer>
-			<BlockHeading>
-				<Heading pageName={pageName} />
-			</BlockHeading>
-			<BlockDescription pageName={pageName}>
-				<form
-					onSubmit={(event) => {
-						event.preventDefault();
-						event.persist();
-						console.log(event);
-					}}>
-					<PageDescription
-						children={description}
-						pageName={pageName}></PageDescription>
-					<UserCredentials />
+			<PageLayout
+				pageName={pageName}
+				pageDescription={description}
+			/>
+			<form
+				onSubmit={(event) => {
+					event.preventDefault();
+					onSubmit(event);
+				}}>
+				{children}
+				<BlockBtn>
+					<Btn type='submit'>{pageName}</Btn>
+				</BlockBtn>
+			</form>
 
-					<BlockBtn>
-						<Btn type='submit'>{pageName}</Btn>
-					</BlockBtn>
-				</form>
-			</BlockDescription>
 		</BlockContainer>
-	);
-};
+	</>
+);
 
 export default FormLayout;
 

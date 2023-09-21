@@ -3,8 +3,8 @@
 import BlockBtn from '../../components/btn/blockBtn';
 import Btn from '../../components/btn/btn';
 import Heading from '../../components/pageLayout/heading/heading';
-import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
-import BlockHeading from '../../components/slytlesBlocks/blockHeading';
+import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
+import BlockHeading from '../../assets/slytlesBlocks/blockHeading';
 const pageName = 'teste pack';
 
 const myDogs = [

@@ -1,9 +1,9 @@
 /** @format */
 import HomeBtns from './homeBtns';
 
-import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
+import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 import PageLayout from '../../components/pageLayout/pageLayout';
-import SetUser from '../../hooks/setUserBasic';
+
 
 const pageName = 'Dog Log';
 const pageDescription =
@@ -11,7 +11,7 @@ const pageDescription =
 
 const Home = () => (
 	<>
-		<BlockContainer>
+		<BlockContainer pageName={pageName}>
 			<PageLayout
 				pageName={pageName}
 				pageDescription={pageDescription}

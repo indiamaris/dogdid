@@ -9,7 +9,7 @@ interface Props {
 const BlockBtn = ({ children }: Props) => {
 	return (
 
-			<div className=' d-grid gap-2 d-md-block mx-auto col-12 mt-5'>
+			<div className=' d-grid gap-2 d-md-block mx-auto col-12 mt-5 px-4'>
 				{children}
 		
 		</div>

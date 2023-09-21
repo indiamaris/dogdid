@@ -1,6 +1,6 @@
 /** @format */
 
-import EventGroupBlock from '../../components/slytlesBlocks/blockEventGroup';
+import EventGroupBlock from '../../assets/slytlesBlocks/blockEventGroup';
 import EventDietIcons from '../../components/createEvents/eventsIcons';
 
 import PageLayout from '../../components/pageLayout/pageLayout';

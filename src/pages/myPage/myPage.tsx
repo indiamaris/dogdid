@@ -2,9 +2,9 @@
 
 import Heading from '../../components/pageLayout/heading/heading';
 
-import BlockContainer from '../../components/slytlesBlocks/BlockContainer';
-import BlockDescription from '../../components/slytlesBlocks/blockDescription';
-import BlockHeading from '../../components/slytlesBlocks/blockHeading';
+import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
+import BlockDescription from '../../assets/slytlesBlocks/blockDescription';
+import BlockHeading from '../../assets/slytlesBlocks/blockHeading';
 import MyPageBtns from './myPageBtns';
 
 import PackList from '../../components/packList';

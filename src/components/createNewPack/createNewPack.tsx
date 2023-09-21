@@ -1,8 +1,8 @@
 /** @format */
 
-import BlockContainer from '../slytlesBlocks/BlockContainer';
+import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 
-import BlockFormControl from '../slytlesBlocks/blockFormControl';
+import BlockFormControl from '../../assets/slytlesBlocks/blockFormControl';
 import Input from '../inputs/input';
 interface Props {
 	children: Element;
