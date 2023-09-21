@@ -5,6 +5,7 @@ import { UserCredentials } from '../../interfaces/interfaces';
 import NewUserCredentials from '../../components/formLayout/newUserCredentials';
 import { createUser } from '../../service/userService';
 import IconBlock from '../iconBlock';
+import PageLayout from '../../components/pageLayout/pageLayout';
 
 const SignIn = () => {
 	const { register, handleSubmit } = useForm<UserCredentials>();
@@ -14,16 +15,18 @@ const SignIn = () => {
 			createUser(data).then((res) => console.log(res));
 		}
 	};
-
+	const description = 'Create a new account: ';
+	const pageName = 'Sign in';
 	return (
-	
-		<FormLayout
-			pageName={'Sign in'}
-			description={'Create a new account: '}
-			onSubmit={handleSubmit(onSubmit)}>
-			<NewUserCredentials register={register} />
-		</FormLayout>
-		
+		<PageLayout
+			pageName={pageName}
+			description={description}>
+			<FormLayout
+				pageName={pageName}
+				onSubmit={handleSubmit(onSubmit)}>
+				<NewUserCredentials register={register} />
+			</FormLayout>
+		</PageLayout>
 	);
 };
 

@@ -14,18 +14,13 @@ import PageLayout from '../pageLayout/pageLayout';
 
 interface Props {
 	pageName: string;
-	description: string;
 	children: ReactNode;
 	onSubmit: FormEventHandler<HTMLFormElement>;
 }
 
-const FormLayout = ({ pageName, description, children, onSubmit }: Props) => (
+const FormLayout = ({ pageName, children, onSubmit }: Props) => (
 	<>
 		<BlockContainer>
-			<PageLayout
-				pageName={pageName}
-				pageDescription={description}
-			/>
 			<form
 				onSubmit={(event) => {
 					event.preventDefault();
@@ -36,7 +31,6 @@ const FormLayout = ({ pageName, description, children, onSubmit }: Props) => (
 					<Btn type='submit'>{pageName}</Btn>
 				</BlockBtn>
 			</form>
-
 		</BlockContainer>
 	</>
 );

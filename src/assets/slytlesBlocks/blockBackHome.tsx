@@ -6,7 +6,7 @@ interface Props {
 }
 const BlockHome = ({ children }: Props) => {
 	return (
-		<div className="d-flex pb-2">
+		<div className="d-flex mt-3 ms-3">
 		
 			{children}
 		</div>

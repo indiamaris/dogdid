@@ -1,5 +1,6 @@
 /** @format */
 
+import { ReactElement } from 'react';
 import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 import BlockHome from '../../assets/slytlesBlocks/blockBackHome';
 import BlockDescription from '../../assets/slytlesBlocks/blockDescription';
@@ -11,10 +12,10 @@ import PageDescription from './pageDescription/pageDescription';
 interface Props {
 	pageName: string;
 
-	pageDescription: string;
-	children?: string;
+	description: string;
+	children?: ReactElement;
 }
-const PageLayout = ({ pageName, pageDescription }: Props) => {
+const PageLayout = ({ pageName, description, children }: Props) => {
 	if (pageName.toLowerCase() !== 'dog log') {
 		return (
 			<>
@@ -25,12 +26,12 @@ const PageLayout = ({ pageName, pageDescription }: Props) => {
 					<BlockHeading>
 						<Heading pageName={pageName} />
 					</BlockHeading>
-
 					<BlockDescription pageName={pageName}>
 						<PageDescription pageName={pageName}>
-							{pageDescription}
+							{description}
 						</PageDescription>
 					</BlockDescription>
+					{children}
 				</BlockContainer>
 			</>
 		);
@@ -43,7 +44,7 @@ const PageLayout = ({ pageName, pageDescription }: Props) => {
 
 				<BlockDescription pageName={pageName}>
 					<PageDescription pageName={pageName}>
-						{pageDescription}
+						{description}
 					</PageDescription>
 				</BlockDescription>
 			</BlockContainer>
@@ -52,4 +53,5 @@ const PageLayout = ({ pageName, pageDescription }: Props) => {
 };
 
 export default PageLayout;
+
 
