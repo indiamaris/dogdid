@@ -1,16 +1,10 @@
 /** @format */
 
 import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
-import BlockDescription from '../../assets/slytlesBlocks/blockDescription';
-import BlockHeading from '../../assets/slytlesBlocks/blockHeading';
 import BlockBtn from '../btn/blockBtn';
 import Btn from '../btn/btn';
-import Heading from '../pageLayout/heading/heading';
-import PageDescription from '../pageLayout/pageDescription/pageDescription';
 import { FormEventHandler, ReactNode } from 'react';
-import Back from '../backOpt/back';
-import BlockBack from '../../assets/slytlesBlocks/blockBack';
-import PageLayout from '../pageLayout/pageLayout';
+
 
 interface Props {
 	pageName: string;
@@ -22,9 +16,9 @@ const FormLayout = ({ pageName, children, onSubmit }: Props) => (
 	<>
 		<BlockContainer>
 			<form
-				onSubmit={(event) => {
-					event.preventDefault();
-					onSubmit(event);
+				onSubmit={(e) => {
+					e.preventDefault();
+					onSubmit(e);
 				}}>
 				{children}
 				<BlockBtn>

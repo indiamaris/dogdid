@@ -9,9 +9,10 @@ import PageLayout from '../../components/pageLayout/pageLayout';
 import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 const Login = () => {
 	const { register, handleSubmit } = useForm<UserCredentials>();
-	const onSubmit = (data: UserCredentials) => console.log(data);
+
 	const pageName = 'Login';
 	const description = 'Please Login';
+		const onSubmit = (data: UserCredentials) => console.log(data);
 
 	return (
 		<BlockContainer pageName={pageName}>
@@ -29,5 +30,6 @@ const Login = () => {
 };
 
 export default Login;
+
 
 

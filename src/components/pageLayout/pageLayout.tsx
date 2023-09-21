@@ -33,6 +33,9 @@ const PageLayout = ({ pageName, description, children }: Props) => {
 					</BlockDescription>
 					{children}
 				</BlockContainer>
+	
+					{/* <Back /> */}
+	
 			</>
 		);
 	} else {
@@ -53,5 +56,7 @@ const PageLayout = ({ pageName, description, children }: Props) => {
 };
 
 export default PageLayout;
+
+
 
 

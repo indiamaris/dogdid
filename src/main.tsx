@@ -9,14 +9,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import App from './components/app/App';
-// import SigIn from './pages/signin/signIn';
 import MyPage from './pages/myPage/myPage';
 import PackUm from './pages/pack/packUm';
-
 import AddDogs from './components/addDogs/addDogsToNewPack';
 import NewPack from './pages/newPack/newPack';
 import Events from './pages/events/events';
-import SignInHoki from './pages/signin/signIn';
+import SignIn from './pages/signin/signIn';
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
@@ -28,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 				/>
 				<Route
 					path='signin'
-					element={<SignInHoki />}
+					element={<SignIn />}
 				/>
 
 				<Route

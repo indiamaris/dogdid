@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { UserCredentials } from '../../interfaces/interfaces';
 import NewUserCredentials from '../../components/formLayout/newUserCredentials';
 import { createUser } from '../../service/userService';
-import IconBlock from '../iconBlock';
 import PageLayout from '../../components/pageLayout/pageLayout';
 
 const SignIn = () => {
@@ -12,7 +11,7 @@ const SignIn = () => {
 
 	const onSubmit = (data: UserCredentials) => {
 		if (data) {
-			createUser(data).then((res) => console.log(res));
+			createUser(data).then((res) => console.log( res));
 		}
 	};
 	const description = 'Create a new account: ';
@@ -29,6 +28,5 @@ const SignIn = () => {
 		</PageLayout>
 	);
 };
-
 export default SignIn;
 

@@ -9,7 +9,9 @@ interface Props {
 const BlockBack = ({ children }: Props) => {
 	return (
 
-			<div className='d-flex align-items-end my-4'>{children}</div>
+		<div
+			className='d-flex justify-items-center my-4 pt-5'
+		>{children}</div>
 	
 	);
 };
