@@ -5,13 +5,13 @@ import Heading from '../../components/pageLayout/heading/heading';
 import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 import BlockDescription from '../../assets/slytlesBlocks/blockDescription';
 import BlockHeading from '../../assets/slytlesBlocks/blockHeading';
-import MyPageBtns from './myPageBtns';
+import MyPageBtns from './userPageBtns';
 
 import PackList from '../../components/packList';
 
 const pageName = 'Welcome';
 
-const MyPage = () => {
+const UserPage = () => {
 	return (
 		<>
 			<BlockContainer>
@@ -32,5 +32,5 @@ const MyPage = () => {
 	);
 };
 
-export default MyPage;
+export default UserPage;
 

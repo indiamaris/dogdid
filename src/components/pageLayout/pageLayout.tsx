@@ -16,47 +16,30 @@ interface Props {
 	children?: ReactElement;
 }
 const PageLayout = ({ pageName, description, children }: Props) => {
-	if (pageName.toLowerCase() !== 'dog log') {
-		return (
-			<>
+	return (
+		<>
+			{pageName.toLowerCase() !== 'dog log' && (
 				<BlockHome>
 					<BackHome />
 				</BlockHome>
-				<BlockContainer>
-					<BlockHeading>
-						<Heading pageName={pageName} />
-					</BlockHeading>
-					<BlockDescription pageName={pageName}>
-						<PageDescription pageName={pageName}>
-							{description}
-						</PageDescription>
-					</BlockDescription>
-					{children}
-				</BlockContainer>
-	
-					{/* <Back /> */}
-	
-			</>
-		);
-	} else {
-		return (
+			)}
+
 			<BlockContainer>
 				<BlockHeading>
 					<Heading pageName={pageName} />
 				</BlockHeading>
-
 				<BlockDescription pageName={pageName}>
 					<PageDescription pageName={pageName}>
 						{description}
 					</PageDescription>
 				</BlockDescription>
+				{children}
 			</BlockContainer>
-		);
-	}
+
+			{/* <Back /> */}
+		</>
+	);
 };
 
 export default PageLayout;
-
-
-
 

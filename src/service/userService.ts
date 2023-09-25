@@ -1,12 +1,52 @@
 /** @format */
 
-import { UserCredentials } from '../interfaces/interfaces';
 import apiClient from './apiClient';
 
-export const createUser = (newUser: UserCredentials) => {
-	return apiClient.post('users', newUser).then((response) => response.data);
+export const getPetEvent = async (id: string) => {
+const token = localStorage.getItem('token');
+// Set headers
+const headers = {
+	Authorization: `Bearer ${token}`,
 };
 
-export const logginUser = (user: UserCredentials) => {
-	return apiClient.post('users', user).then((response) => response.data);
+	return apiClient
+		.get(`events/${id}`, {headers})
+		.then((response) => {
+			console.log(response.data);
+		})
+		.catch((error) => {
+			console.error(error);
+		});
 };
+
+
+export const postPetEvent = async (event: string) => {
+	const token = localStorage.getItem('token');
+	// Set headers
+	const headers = {
+		Authorization: `Bearer ${token}`,
+	};
+
+	return apiClient
+		.post(`events`,event, { headers })
+		.then((response) => {
+			console.log(response.data);
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+};
+
+// export const getPetEventAgain = async (id: string, Headers: AxiosRequestConfig) => {
+// 	return apiClient
+// 		.get(`events/${id}`, Headers)
+// 		.then((response) => {
+// 			console.log(response.data);
+// 		})
+// 		.catch((error) => {
+// 			console.error(error);
+// 		});
+
+
+
+// };

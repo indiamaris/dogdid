@@ -9,12 +9,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import App from './components/app/App';
-import MyPage from './pages/myPage/myPage';
+
 import PackUm from './pages/pack/packUm';
 import AddDogs from './components/addDogs/addDogsToNewPack';
 import NewPack from './pages/newPack/newPack';
 import Events from './pages/events/events';
 import SignIn from './pages/signin/signIn';
+import UserPage from './pages/userPage/userPage';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -37,7 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 				<Route
 					path='mypage'
-					element={<MyPage />}
+					element={<UserPage />}
 				/>
 				<Route
 					path='mypage/newpack'

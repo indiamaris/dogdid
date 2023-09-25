@@ -3,7 +3,7 @@ import FormLayout from '../../components/formLayout/formLayout';
 import { useForm } from 'react-hook-form';
 import { UserCredentials } from '../../interfaces/interfaces';
 import NewUserCredentials from '../../components/formLayout/newUserCredentials';
-import { createUser } from '../../service/userService';
+import { createUser } from '../../service/auth.service';
 import PageLayout from '../../components/pageLayout/pageLayout';
 
 const SignIn = () => {
@@ -11,7 +11,7 @@ const SignIn = () => {
 
 	const onSubmit = (data: UserCredentials) => {
 		if (data) {
-			createUser(data).then((res) => console.log( res));
+			createUser(data).then((res) => res);
 		}
 	};
 	const description = 'Create a new account: ';
@@ -29,4 +29,5 @@ const SignIn = () => {
 	);
 };
 export default SignIn;
+
 
