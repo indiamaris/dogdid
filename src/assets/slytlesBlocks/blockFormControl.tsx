@@ -8,12 +8,14 @@ interface Props {
 
 const BlockFormControl = ({ children }: Props) => {
 	return (
-		<div className='form-floating mb-4'>
+		<div
+			className=' mb-4 p-2
+display-6 fs-3 text-muted
+	  '>
 			{children}
 		</div>
 	);
 };
 
 export default BlockFormControl;
-
 

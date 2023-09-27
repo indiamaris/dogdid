@@ -47,7 +47,7 @@
 
 @media (min-width: 576px) {
 	body {
-		height: 1000px;
+	height: 900px;
 		padding: 50px;
 	}
 
@@ -64,8 +64,8 @@
 /* Small OLD devices like iphone SE (landscape phones, 375px and up ) */
 @media (min-width: 992px) {
 	body {
-		height: 1500px;
-		padding: 90px;
+		height: 900px;
+		padding: 50px;
 		font-size: 30px;
 	}
 
@@ -82,7 +82,7 @@
 
 @media (min-width: 1400px) {
 	body {
-		height: 1000px;
+	height: 900px;
 		padding: 100px;
 		font-size: 30px;
 	}

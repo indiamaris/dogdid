@@ -30,7 +30,7 @@ const LoginCredentials = ({ register }: UserCredentialsProps) => {
 					type='password'
 					className='form-control'
 					id='floatingInputPassword'
-					label='password'
+					label='Password'
 					placeholder='Password'
 					{...register('password')}
 				/>
@@ -39,7 +39,6 @@ const LoginCredentials = ({ register }: UserCredentialsProps) => {
 			<BlockCheckInput>
 				<Input
 					type='checkbox'
-					className='naosei'
 					id='flexCheckDefault'
 					placeholder='rememberme'
 					label='	Remember me'
@@ -50,5 +49,4 @@ const LoginCredentials = ({ register }: UserCredentialsProps) => {
 };
 
 export default LoginCredentials;
-
 
