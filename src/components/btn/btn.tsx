@@ -15,7 +15,9 @@ interface Props {
 }
 
 const Btn = ({ children, className, to, onClick, type }: Props) => {
-	const extendedClassName = `btn btn-primary rounded-pill ${className || ''}`;
+	const extendedClassName = `btn btn-primary rounded-pill col-12 d-xxl-block p-2 m-4 ${
+		className || ''
+	}`;
 
 	return to ? (
 		<Link

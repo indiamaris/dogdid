@@ -1,22 +1,33 @@
 /** @format */
 
+import { useEffect, useState } from 'react';
+import { getAllPacks } from '../service/userService';
 import BlockBtn from './btn/blockBtn';
 import Btn from './btn/btn';
-const myPacks = [
-	{ name: 'Destroyers', id: 1 },
-	{ name: 'CalmPets', id: 2 },
-	{ name: 'WedontEatSlips', id: 3 },
-];
+
+interface Pack {
+	name: string;
+	id: number;
+}
+
 const PackList = () => {
+	const [allPacks, setAllPacks] = useState<Pack[]>([]);
+	useEffect(() => {
+		getAllPacks().then(setAllPacks);
+	}, []);
+
 	return (
 		<BlockBtn>
-			{myPacks.map((pack) => (
+			<p>a list here</p>
+			{/* <p>{allPacks}</p> */}
+			{/* {allPacks.map((pack: Pack) => (
 				<Btn
 					key={pack.id}
 					to={`pack/${pack.id}`}>
-					{pack.name}{' '}
+					{pack.name}
+					console.log(allPacks)
 				</Btn>
-			))}
+			))} */}
 		</BlockBtn>
 	);
 };

@@ -5,7 +5,6 @@ import BlockBtn from '../btn/blockBtn';
 import Btn from '../btn/btn';
 import { FormEventHandler, ReactNode } from 'react';
 
-
 interface Props {
 	pageName: string;
 	children: ReactNode;
@@ -21,11 +20,11 @@ const FormLayout = ({ pageName, children, onSubmit }: Props) => (
 					onSubmit(e);
 				}}>
 				{children}
-				<BlockBtn>
-					<Btn type='submit'>{pageName}</Btn>
-				</BlockBtn>
 			</form>
 		</BlockContainer>
+		<BlockBtn>
+			<Btn type='submit'>{pageName}</Btn>
+		</BlockBtn>
 	</>
 );
 

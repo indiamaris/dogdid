@@ -15,8 +15,9 @@ import AddDogs from './components/addDogs/addDogsToNewPack';
 import NewPack from './pages/newPack/newPack';
 import Events from './pages/events/events';
 import SignIn from './pages/signin/signIn';
+import ErrorPage from './pages/errorPage/errorPage';
 import UserPage from './pages/userPage/userPage';
-
+import { children } from 'react';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 				/>
 				<Route
 					path='signin'
+					errorElement={<ErrorPage />}
 					element={<SignIn />}
 				/>
 
@@ -37,34 +39,29 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 				/>
 
 				<Route
-					path='mypage'
-					element={<UserPage />}
-				/>
-				<Route
-					path='mypage/newpack'
-					element={<NewPack />}
-				/>
+					path='userpage/:useremail'
+					element={<UserPage />}>
+					<Route
+						path='userpage/:useremail/newpack'
+						element={<NewPack />}
+					/>
+					<Route
+						path='userpage/:useremail/pack/1'
+						element={<PackUm />}>
+						<Route
+							path='userpage/:useremail/pack/1/adddogs'
+							element={<AddDogs />}
+						/>
 
-				<Route />
-
-				<Route
-					path='mypage/pack/1'
-					element={<PackUm />}
-				/>
-
-				<Route
-					path='adddogs'
-					element={<AddDogs />}
-				/>
-
-				<Route
-					path='events'
-					element={<Events />}
-				/>
+						<Route
+							path='userpage/:useremail/pack/1/events'
+							element={<Events />}
+						/>
+					</Route>
+				</Route>
 			</Routes>
 			<App />
 		</BrowserRouter>
 	</React.StrictMode>
 );
-
 

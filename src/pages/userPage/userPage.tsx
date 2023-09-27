@@ -9,9 +9,12 @@ import MyPageBtns from './userPageBtns';
 
 import PackList from '../../components/packList';
 
+
 const pageName = 'Welcome';
 
 const UserPage = () => {
+
+
 	return (
 		<>
 			<BlockContainer>
@@ -22,7 +25,6 @@ const UserPage = () => {
 					Select your pack
 					<PackList />
 				</BlockDescription>
-
 				<BlockDescription pageName={pageName}>
 					or
 					<MyPageBtns />
@@ -33,4 +35,7 @@ const UserPage = () => {
 };
 
 export default UserPage;
+
+
+
 

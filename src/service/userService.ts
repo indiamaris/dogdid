@@ -2,15 +2,15 @@
 
 import apiClient from './apiClient';
 
-export const getPetEvent = async (id: string) => {
-const token = localStorage.getItem('token');
-// Set headers
-const headers = {
-	Authorization: `Bearer ${token}`,
-};
+export const getEvent = async (id: string) => {
+	const token = localStorage.getItem('token');
+	// Set headers
+	const headers = {
+		Authorization: `Bearer ${token}`,
+	};
 
 	return apiClient
-		.get(`events/${id}`, {headers})
+		.get(`events/${id}`, { headers })
 		.then((response) => {
 			console.log(response.data);
 		})
@@ -19,8 +19,23 @@ const headers = {
 		});
 };
 
+export const postEvent = async (event: string) => {
+	const token = localStorage.getItem('token');
+	// Set headers
+	const headers = {
+		Authorization: `Bearer ${token}`,
+	};
+	return apiClient
+		.post(`events`, event, { headers })
+		.then((response) => {
+			console.log(response.data);
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+};
 
-export const postPetEvent = async (event: string) => {
+export const getAllPacks = async () => {
 	const token = localStorage.getItem('token');
 	// Set headers
 	const headers = {
@@ -28,7 +43,25 @@ export const postPetEvent = async (event: string) => {
 	};
 
 	return apiClient
-		.post(`events`,event, { headers })
+		.get(`packs`, { headers })
+		.then((response) => {
+			console.log(response.data);
+			return response.data;
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+};
+
+export const getPack = async (id: string) => {
+	const token = localStorage.getItem('token');
+	// Set headers
+	const headers = {
+		Authorization: `Bearer ${token}`,
+	};
+
+	return apiClient
+		.get(`packs/${id}/pets`, { headers })
 		.then((response) => {
 			console.log(response.data);
 		})
@@ -47,6 +80,5 @@ export const postPetEvent = async (event: string) => {
 // 			console.error(error);
 // 		});
 
-
-
 // };
+
