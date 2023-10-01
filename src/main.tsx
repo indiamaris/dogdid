@@ -16,32 +16,36 @@ import SignIn from './pages/signin/signIn';
 import ErrorPage from './pages/errorPage/errorPage';
 import UserPage from './pages/userPage/userPage';
 import PackPage from './pages/login/packPage/packPage';
-
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
-				/>
-				<Route
-					path='signin'
-					errorElement={<ErrorPage />}
-					element={<SignIn />}
-				/>
+		<QueryClientProvider client={queryClient}>
+			<ReactQueryDevtools />
+			<BrowserRouter>
+				<Routes>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+					<Route
+						path='signin'
+						errorElement={<ErrorPage />}
+						element={<SignIn />}
+					/>
 
-				<Route
-					path='login'
-					element={<Login />}
-				/>
+					<Route
+						path='login'
+						element={<Login />}
+					/>
 
-				<Route
-					path='userpage'
-					element={<UserPage />}
-				/>
+					<Route
+						path='userpage'
+						element={<UserPage />}
+					/>
 
-				{/* <Route
+					{/* <Route
 						path='userpage/pack/1'
 						element={<PackUm />}>
 						<Route
@@ -55,23 +59,27 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 						/>
 					</Route>
 				</Route> */}
-				<Route
-					path='userpage/newpack'
-					element={<NewPack />}
-				/>
+					<Route
+						path='userpage/newpack'
+						element={<NewPack />}
+					/>
 
-				<Route
-					path='packpage/:id'
-					element={<PackPage />}
-				/>
+					<Route
+						path='packpage/:id'
+						element={<PackPage />}
+					/>
 
-				<Route
-					path='/events'
-					element={<Events />}
-				/>
-			</Routes>
-			<App />
-		</BrowserRouter>
+					<Route
+						path='/events'
+						element={<Events />}
+					/>
+				</Routes>
+				<App />
+			</BrowserRouter>
+		</QueryClientProvider>
 	</React.StrictMode>
 );
+
+
+
 
