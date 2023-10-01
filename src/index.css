@@ -47,7 +47,7 @@
 
 @media (min-width: 576px) {
 	body {
-	height: 900px;
+		height: 900px;
 		padding: 50px;
 	}
 
@@ -82,7 +82,7 @@
 
 @media (min-width: 1400px) {
 	body {
-	height: 900px;
+		height: 900px;
 		padding: 100px;
 		font-size: 30px;
 	}

@@ -1,5 +1,5 @@
 /** @format */
-
+import { NewPackRequest } from '../interfaces/interfaces';
 import apiClient from './apiClient';
 
 export const getEvent = async (id: string) => {
@@ -35,7 +35,7 @@ export const postEvent = async (event: string) => {
 		});
 };
 
-export const getAllPacks = async () => {
+export const getPacks = async () => {
 	const token = localStorage.getItem('token');
 	// Set headers
 	const headers = {
@@ -46,14 +46,15 @@ export const getAllPacks = async () => {
 		.get(`packs`, { headers })
 		.then((response) => {
 			console.log(response.data);
+			console.log(response);
 			return response.data;
 		})
 		.catch((error) => {
-			console.error(error);
+			console.error(`this is a error ${error}`);
 		});
 };
 
-export const getPack = async (id: string) => {
+export const getPetsPack = async (id: string) => {
 	const token = localStorage.getItem('token');
 	// Set headers
 	const headers = {
@@ -63,22 +64,39 @@ export const getPack = async (id: string) => {
 	return apiClient
 		.get(`packs/${id}/pets`, { headers })
 		.then((response) => {
-			console.log(response.data);
+			return response.data;
 		})
 		.catch((error) => {
 			console.error(error);
 		});
 };
 
-// export const getPetEventAgain = async (id: string, Headers: AxiosRequestConfig) => {
+export const createPack = async (newPack: NewPackRequest) => {
+	const token = localStorage.getItem('token');
+	// Set headers
+	const headers = {
+		Authorization: `Bearer ${token}`,
+	};
+	return apiClient
+		.post('packs', newPack, { headers })
+		.then((response) => console.log(response.data));
+};
+
+
+// export const getPackPets = async (id: string) => {
+// 	const token = localStorage.getItem('token');
+// 	// Set headers
+// 	const headers = {
+// 		Authorization: `Bearer ${token}`,
+// 	};
+
 // 	return apiClient
-// 		.get(`events/${id}`, Headers)
+// 		.get(`packs/${id}/pets`, { headers })
 // 		.then((response) => {
 // 			console.log(response.data);
 // 		})
 // 		.catch((error) => {
 // 			console.error(error);
 // 		});
-
 // };
 

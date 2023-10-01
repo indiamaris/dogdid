@@ -17,8 +17,8 @@ const Login = () => {
 
 	const onSubmit = (user: UserCredentials) => {
 		authenticate(user).then((res) => {
-			sessionStorage.setItem('token', res.token);
-			navigate(`/userpage/${user.email}`);
+			localStorage.setItem('token', res.token);
+			navigate(`/userpage`);
 		});
 	};
 
@@ -26,14 +26,13 @@ const Login = () => {
 		<BlockContainer pageName={pageName}>
 			<PageLayout
 				pageName={pageName}
-				description={description}>
+				description={description}/>
 				<FormLayout
 					pageName={pageName}
 					onSubmit={handleSubmit(onSubmit)}>
 					<LoginCredentials register={register} />
 				</FormLayout>
-			</PageLayout>
-		</BlockContainer>
+˜		</BlockContainer>
 	);
 };
 

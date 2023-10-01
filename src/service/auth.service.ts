@@ -10,31 +10,14 @@ export const createUser = async (newUser: UserCredentials) => {
 		.then((response) => console.log(response.data));
 };
 
+
 // Definindo a função de login
 export const authenticate = async (user: UserCredentials) => {
 	// withCredentials: true
 	return apiClient.post('auth/login', user).then((response) => response.data);
 };
 
-// Função para salar o usuário logado no local storage
 
-export const getLoggedUser = async () => {
-	const data = localStorage.getItem('user');
-	if (!data) return null;
-	try {
-		const parsedData = JSON.parse(data);
-		return parsedData;
-	} catch (error) {
-		console.log(error);
-		return null;
-	}
-};
 
-export const setLoggedUser = (data: UserCredentials) => {
-	const parsedData = JSON.stringify(data);
-	localStorage.setItem('user', parsedData);
-};
 
-// };
-// export default authService;
 

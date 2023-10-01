@@ -8,3 +8,19 @@ export default axios.create({
 
 export { AxiosError, CanceledError };
 
+// export const postPack = async (event: string) => {
+// 	const token = localStorage.getItem('token');
+// 	// Set headers
+// 	const headers = {
+// 		Authorization: `Bearer ${token}`,
+// 	};
+// 	return apiClient
+// 		.post(`packs`, event, { headers })
+// 		.then((response) => {
+// 			console.log(response.data);
+// 		})
+// 		.catch((error) => {
+// 			console.error(error);
+// 		});
+
+// };

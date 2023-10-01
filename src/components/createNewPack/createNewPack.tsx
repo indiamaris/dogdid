@@ -1,27 +1,33 @@
 /** @format */
 
+import { UseFormRegister } from 'react-hook-form';
 import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 
 import BlockFormControl from '../../assets/slytlesBlocks/blockFormControl';
-import Input from '../inputs/input';
+import { MouseEventHandler, FormEventHandler } from 'react';
+import { PackCredentials } from '../../interfaces/interfaces';
+import NewPackCredentials from '../formLayout/createNewPack';
+
 interface Props {
 	children: Element;
 	pageName: string;
 	description: string;
+	register: UseFormRegister<PackCredentials>;
 	onClick?: MouseEventHandler<HTMLButtonElement>;
+	onSubmit: FormEventHandler<HTMLFormElement>;
 }
 
-const CreateNewPack = () => (
+const CreateNewPack = ({ onSubmit, register }: Props) => (
 	<BlockContainer>
 		<form>
 			<BlockFormControl>
-				<Input
-					type='text'
-					className='form-control'
-					id='packname'
-					placeholder='text'
-					label={'New pack name'}
-				/>
+				<form
+					onSubmit={(e) => {
+						e.preventDefault();
+						onSubmit(e);
+					}}>
+					<NewPackCredentials />
+				</form>
 			</BlockFormControl>
 		</form>
 	</BlockContainer>

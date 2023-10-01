@@ -16,7 +16,7 @@ const Home = () => (
 				description={pageDescription}
 			/>
 		
-						<HomeBtns />
+			<HomeBtns />
 		</BlockContainer>
 	</>
 );

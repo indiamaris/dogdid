@@ -1,6 +1,6 @@
 /** @format */
 
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import BlockContainer from '../../assets/slytlesBlocks/BlockContainer';
 import BlockHome from '../../assets/slytlesBlocks/blockBackHome';
 import BlockDescription from '../../assets/slytlesBlocks/blockDescription';
@@ -13,7 +13,7 @@ interface Props {
 	pageName: string;
 
 	description: string;
-	children?: ReactElement;
+	children?: ReactNode;
 }
 const PageLayout = ({ pageName, description, children }: Props) => {
 	return (

@@ -20,13 +20,14 @@ const FormLayout = ({ pageName, children, onSubmit }: Props) => (
 					onSubmit(e);
 				}}>
 				{children}
+				<BlockBtn>
+					<Btn type='submit'>{pageName}</Btn>
+				</BlockBtn>
 			</form>
 		</BlockContainer>
-		<BlockBtn>
-			<Btn type='submit'>{pageName}</Btn>
-		</BlockBtn>
 	</>
 );
 
 export default FormLayout;
+
 
