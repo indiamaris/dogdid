@@ -7,11 +7,16 @@ interface Props {
 }
 const BlockDogList = ({ children }: Props) => {
 	return (
-		<div className='col-12   d-flex justify-content-center  flex-wrap mt-4'>
+		<div
+			className='col-12 row-2
+		card
+		   d-flex flex-row justify-content-start align-items-center  flex-sm-wrap ms-3
+		   bg-info bg-gradient bg-opacity-10 '>
 			{children}
 		</div>
 	);
 };
 
 export default BlockDogList;
+
 

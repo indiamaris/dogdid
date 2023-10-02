@@ -14,10 +14,9 @@ interface Props {
 	type?: 'button' | 'submit' | 'reset';
 }
 
-const BtnSucess = ({ children, className, to, onClick, type }: Props) => {
-	const extendedClassName = `col-12 btn btn-sm btn-success rounded-pill ${
-		className || ''
-	}`;
+const BtnLg = ({ children, className, to, onClick, type }: Props) => {
+	const extendedClassName = `						className=' btn btn-sm  col-12 d-xxl-block p-2 m-4  '>
+ rounded-pill ${className || ''}`;
 
 	return to ? (
 		<Link
@@ -36,5 +35,5 @@ const BtnSucess = ({ children, className, to, onClick, type }: Props) => {
 	);
 };
 
-export default BtnSucess;
+export default BtnLg;
 

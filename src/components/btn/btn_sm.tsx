@@ -15,7 +15,7 @@ interface Props {
 }
 
 const BtnSm = ({ children, className, to, onClick, type }: Props) => {
-	const extendedClassName = `col-4 btn btn-sm btn-outline-primary m-3 rounded-pill ${
+	const extendedClassName = `btn btn-outline-primary col-2 d-xxl-block px-4 m-2   ${
 		className || ''
 	}`;
 
@@ -37,4 +37,5 @@ const BtnSm = ({ children, className, to, onClick, type }: Props) => {
 };
 
 export default BtnSm;
+
 

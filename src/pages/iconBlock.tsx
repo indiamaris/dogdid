@@ -1,6 +1,7 @@
 /** @format */
 
 import { ReactNode } from 'react';
+import Input from '../components/inputs/input';
 interface Props {
 	icon: ReactNode;
 	name: string;
@@ -8,12 +9,25 @@ interface Props {
 
 const IconBlock = ({ icon, name }: Props) => {
 	return (
-		<div className=' text-center'>
+		<div className=' text-center text-muted'>
 			{icon}
-			<div className='text-muted'>{name}</div>
+			<Input
+				className='text-muted'
+				type='checkbox'
+				id='flexCheckDefault'
+				placeholder='{name}'
+				label=''></Input>
+			<div>{name}</div>
 		</div>
 	);
 };
 
+
+
 export default IconBlock;
+
+
+
+
+
 
