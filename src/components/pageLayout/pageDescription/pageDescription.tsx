@@ -1,9 +1,10 @@
 /** @format */
 
+import { ReactNode } from 'react';
+
 interface Props {
 	pageName: string;
-	children: string;
-
+	children: ReactNode;
 }
 
 const PageDescription = ({ children, pageName }: Props) => {
@@ -13,7 +14,4 @@ const PageDescription = ({ children, pageName }: Props) => {
 	return <p className={` display-6 ${alignment} `}>{children}</p>;
 };
 export default PageDescription;
-
-
-
 

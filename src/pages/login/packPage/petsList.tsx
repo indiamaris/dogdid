@@ -4,6 +4,10 @@ import { useState, useEffect } from 'react';
 import { Pet } from '../../../interfaces/interfaces';
 import BlockBtn from '../../../components/btn/blockBtn';
 import { getPetsPack } from '../../../service/userService';
+import BlockDogs from '../../../assets/slytlesBlocks/blockDogList';
+import BlockDogList from '../../../assets/slytlesBlocks/blockDogList';
+import Btn from '../../../components/btn/btn';
+import BtnSm from '../../../components/btn/btn_sm';
 
 interface PetInPack extends Pet {
 	createdAt: string;
@@ -31,47 +35,21 @@ const PetList = ({ id }: PetListProps) => {
 	console.log(PetsResponse);
 	return (
 		<>
-			<div className='lists d-flex flex-column justify-content-end '>
-				<div className='col-12  d-flex justify-content-center '>
-					<button
-						type='button'
-						disabled={false}
-						className='col-8 btn btn-lg btn-warning '>
-						Click here to select <strong>ALL</strong> dogs in that
-						pack
-					</button>
-				</div>
+			<BlockDogList>
+			
 
-				<div className='display-8 d-flex justify-content-center mt-5'>
-					<p>
-						Or click on the dogs name above to choose{' '}
-						<strong>one by one</strong> !
-					</p>
-				</div>
-				<div className='col-12   d-flex justify-content-center  flex-wrap mt-4'>
-					{pets.map((pet) => {
-						return (
-							<button
-								type='button'
-								className='col-2 btn btn-lg btn-outline-primary m-3'>
-								{pet.name}
-							</button>
-						);
-					})}
-				</div>
-			</div>
-			<BlockBtn>
-				{/* {Pets.map((Pet: Pet) => (
-					<Btn
-						key={Pet.id}
-						to={`Pet/${Pet.id}`}>
-						{Pet.name}
-					</Btn>
-				))} */}
-			</BlockBtn>
+				{pets.map((pet) => {
+					return <BtnSm type='button'> {pet.name}</BtnSm>;
+				})}
+			</BlockDogList>
+
 		</>
 	);
 };
 
 export default PetList;
+
+
+
+
 

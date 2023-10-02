@@ -54,6 +54,23 @@ export const getPacks = async () => {
 		});
 };
 
+export const getPack = async (id: string) => {
+	const token = localStorage.getItem('token');
+	// Set headers
+	const headers = {
+		Authorization: `Bearer ${token}`,
+	};
+
+	return apiClient
+		.get(`packs/${id}`, { headers })
+		.then((response) => {
+			return response.data;
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+};
+
 export const getPetsPack = async (id: string) => {
 	const token = localStorage.getItem('token');
 	// Set headers
@@ -81,7 +98,6 @@ export const createPack = async (newPack: NewPackRequest) => {
 		.post('packs', newPack, { headers })
 		.then((response) => console.log(response.data));
 };
-
 
 // export const getPackPets = async (id: string) => {
 // 	const token = localStorage.getItem('token');

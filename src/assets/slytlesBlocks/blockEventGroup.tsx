@@ -1,15 +1,16 @@
 /** @format */
 
+import { ReactNode } from 'react';
 import BlockContainer from './BlockContainer';
 
 interface Props {
 	groupName: string;
 	groupId?: string;
 	groupIcon?: string;
-	children: string;
-	className:string
+	children: ReactNode;
+	className: string;
 }
-const EventGroupBlock = ({
+const GroupEventBlock = ({
 	children,
 	groupName,
 	className,
@@ -18,22 +19,17 @@ const EventGroupBlock = ({
 }: Props) => {
 	return (
 		<BlockContainer>
-			<div>
+			<div className='text-center '>
 				<div> {groupName}</div>
 
-				<div className={`card  ${className}`}>{children}</div>
+				<div className={` bg-gradient bg-opacity-10 card  ${className}`}>
+					{children}
+				</div>
 			</div>
 		</BlockContainer>
 	);
 };
 
-export default EventGroupBlock;
-
-
-
-
-
-
-
+export default GroupEventBlock;
 
 

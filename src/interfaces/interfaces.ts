@@ -37,4 +37,19 @@ export interface NewPackRequest {
 	name: string;
 	pets: Pet[];
 }
+export interface Pack {
+	name: string;
+	id: string;
+}
 
+export interface PackResponse {
+	packs: Pack[];
+	pagination: {
+		page: number;
+		pageSize: number;
+		total: 0;
+	};
+
+
+
+}
